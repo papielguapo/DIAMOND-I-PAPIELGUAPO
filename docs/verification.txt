@@ -1,0 +1,70 @@
+PASS Editor opens at 50 percent (626x290)
+PASS Size menu preserves aspect ratio
+PASS Size menu preserves aspect ratio
+PASS Size menu preserves aspect ratio
+PASS Size menu preserves aspect ratio
+PASS Size menu preserves aspect ratio
+PASS Size menu preserves aspect ratio
+PASS Size menu preserves aspect ratio
+PASS Size menu preserves aspect ratio
+PASS Size menu preserves aspect ratio
+PASS Size lower bound 25 percent
+PASS Size upper bound 200 percent
+PASS Closing an enlarged editor reopens small
+PASS Legacy state cannot force a large opening size
+Spectral 44100 Hz 2x worst residual -92.7729 dBc
+PASS H2-H13 100 Hz FFT frequency, calibrated gain and residual harmonics
+PASS All harmonics zero: exact delayed clean sine
+Spectral 44100 Hz 4x worst residual -88.0211 dBc
+PASS H2-H13 100 Hz FFT frequency, calibrated gain and residual harmonics
+PASS All harmonics zero: exact delayed clean sine
+Spectral 44100 Hz 8x worst residual -84.9937 dBc
+PASS H2-H13 100 Hz FFT frequency, calibrated gain and residual harmonics
+PASS All harmonics zero: exact delayed clean sine
+Spectral 48000 Hz 2x worst residual -92.6638 dBc
+PASS H2-H13 100 Hz FFT frequency, calibrated gain and residual harmonics
+PASS All harmonics zero: exact delayed clean sine
+Spectral 48000 Hz 4x worst residual -88.0305 dBc
+PASS H2-H13 100 Hz FFT frequency, calibrated gain and residual harmonics
+PASS All harmonics zero: exact delayed clean sine
+Spectral 48000 Hz 8x worst residual -85.0035 dBc
+PASS H2-H13 100 Hz FFT frequency, calibrated gain and residual harmonics
+PASS All harmonics zero: exact delayed clean sine
+Spectral 96000 Hz 2x worst residual -92.1719 dBc
+PASS H2-H13 100 Hz FFT frequency, calibrated gain and residual harmonics
+PASS All harmonics zero: exact delayed clean sine
+Spectral 96000 Hz 4x worst residual -87.6898 dBc
+PASS H2-H13 100 Hz FFT frequency, calibrated gain and residual harmonics
+PASS All harmonics zero: exact delayed clean sine
+Spectral 96000 Hz 8x worst residual -84.769 dBc
+PASS H2-H13 100 Hz FFT frequency, calibrated gain and residual harmonics
+PASS All harmonics zero: exact delayed clean sine
+PASS High-tone alias measurement: 4x/8x folded component below -75 dBFS
+PASS High-tone alias measurement: 4x/8x folded component below -75 dBFS
+PASS High-tone alias measurement: 4x/8x folded component below -75 dBFS
+PASS High-tone alias measurement: 4x/8x folded component below -75 dBFS
+PASS High-tone alias measurement: 4x/8x folded component below -75 dBFS
+PASS High-tone alias measurement: 4x/8x folded component below -75 dBFS
+PASS High-tone alias measurement: 4x/8x folded component below -75 dBFS
+PASS High-tone alias measurement: 4x/8x folded component below -75 dBFS
+PASS High-tone alias measurement: 4x/8x folded component below -75 dBFS
+PASS All 17 audio parameters persist
+PASS Invalid state rejected
+PASS No C++ heap allocations in oversized processBlock
+PASS Silent right channel remains silent
+PASS NaN and infinity inputs contained
+PASS Oversampling switches retain fixed latency
+PASS Sample rate re-prepare clears previous DSP history
+PASS Sample rate re-prepare clears previous DSP history
+PASS Sample rate re-prepare clears previous DSP history
+PASS Combined generators equal independent contributions without shared gain changes
+BENCHMARK 96 kHz stereo, 12 generators, 1 audio second: 0.321694 seconds CPU wall time; latency 99 samples
+PASS Measured throughput exceeds realtime on this machine
+PASS Bypass remains exact delayed dry signal
+PASS Interface snapshot exported
+PASS Interface snapshot exported
+PASS Interface snapshot exported
+PASS Interface snapshot exported
+PASS Interface snapshot exported
+PASS Interface snapshot exported
+FAILURES 0

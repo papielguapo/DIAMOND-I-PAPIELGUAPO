@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.22)
+project(DiamondI_HarmonicEmulation VERSION 1.0.1 LANGUAGES C CXX)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(DIAMOND_JUCE_PATH "" CACHE PATH "Existing JUCE checkout")
+if(NOT EXISTS "${DIAMOND_JUCE_PATH}/CMakeLists.txt")
+ message(FATAL_ERROR "Set DIAMOND_JUCE_PATH to an existing JUCE source checkout")
+endif()
+add_subdirectory("${DIAMOND_JUCE_PATH}" JUCE)
+juce_add_plugin(DiamondI COMPANY_NAME PAPIELGUAPO BUNDLE_ID com.papielguapo.diamondi
+ PLUGIN_MANUFACTURER_CODE Papi PLUGIN_CODE DiH1 FORMATS VST3 Standalone
+ PRODUCT_NAME "DIAMOND I - HARMONIC EMULATION" COPY_PLUGIN_AFTER_BUILD FALSE
+ IS_SYNTH FALSE NEEDS_MIDI_INPUT FALSE NEEDS_MIDI_OUTPUT FALSE)
+juce_add_binary_data(DiamondSkin SOURCES assets/rack-reference.png)
+target_sources(DiamondI PRIVATE Source/PluginProcessor.cpp Source/PluginEditor.cpp)
+target_compile_definitions(DiamondI PUBLIC JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1 JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0 JUCE_VST3_CAN_REPLACE_VST2=0)
+target_include_directories(DiamondI PUBLIC "${DIAMOND_JUCE_PATH}/modules")
+target_link_libraries(DiamondI PRIVATE DiamondSkin juce::juce_audio_utils juce::juce_dsp PUBLIC juce::juce_recommended_config_flags)
+juce_add_console_app(DiamondVerify PRODUCT_NAME DiamondVerify)
+target_sources(DiamondVerify PRIVATE Tests/Verify.cpp)
+target_link_libraries(DiamondVerify PRIVATE DiamondI)
+enable_testing()
+add_test(NAME SpectralAndFunctional COMMAND DiamondVerify "${CMAKE_CURRENT_SOURCE_DIR}/docs")

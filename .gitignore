@@ -1,0 +1,4 @@
+build*/
+dist/
+docs/pluginval.txt
+docs/screenshot-verification.txt

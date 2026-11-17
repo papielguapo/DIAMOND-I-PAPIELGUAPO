@@ -1,0 +1,9 @@
+{
+ "version": 3,
+ "configurePresets": [
+  {"name":"vs2022-x64","generator":"Visual Studio 17 2022","architecture":"x64","binaryDir":"${sourceDir}/build-vs2022","cacheVariables":{"DIAMOND_JUCE_PATH":"$env{JUCE_PATH}"}},
+  {"name":"vs2026-x64","generator":"Visual Studio 18 2026","architecture":"x64","binaryDir":"${sourceDir}/build","cacheVariables":{"DIAMOND_JUCE_PATH":"$env{JUCE_PATH}"}}
+ ],
+ "buildPresets":[{"name":"release-vs2022","configurePreset":"vs2022-x64","configuration":"Release","targets":["DiamondI_VST3","DiamondVerify"]}],
+ "testPresets":[{"name":"release-vs2022","configurePreset":"vs2022-x64","configuration":"Release","output":{"outputOnFailure":true}}]
+}
