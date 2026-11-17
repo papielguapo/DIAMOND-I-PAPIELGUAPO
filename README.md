@@ -1,5 +1,7 @@
 # DIAMOND I — PAPIELGUAPO
 
+![Interfaz al 50%](docs/interface-626.png)
+
 By **PAPIELGUAPO**. Plugin JUCE independiente para Windows x64, VST3 y Standalone. Doce faders H2–H13, INPUT/OUTPUT ±24 dB, MIX 0–100%, oversampling FIR 2x/4x/8x, bypass con transición y medidores estéreo. Arranca limpio, con los doce armónicos a cero. Doble clic restablece cada fader. El host guarda y automatiza los 17 parámetros. La interfaz se abre siempre al 50% (626 × 290 px); arrastra la esquina o haz clic derecho en el fondo para elegir un tamaño entre el 25% y el 200%. Al cerrar y volver a abrir comienza otra vez en pequeño, también al cargar un preset antiguo.
 
 ## Referencias inspeccionadas
